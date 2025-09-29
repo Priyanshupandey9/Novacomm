@@ -874,7 +874,7 @@
                     <input type="password" id="login-password" placeholder="Password" required>
                 </div>
                 <button class="btn" id="login-btn">Login</button>
-                <button class="btn btn-google" id="google-login-btn">Login with Google</button>
+               
                 <p class="toggle-form">Don't have an account? <a href="#" id="show-register">Register</a></p>
             </div>
             <div id="register-form" style="display: none;">
@@ -1488,7 +1488,7 @@ const firebaseConfig = {
                 if (!email || !password) { showNotification('Please enter all fields', 'error'); return; }
                 auth.signInWithEmailAndPassword(email, password).catch(err => showNotification(err.message, 'error'));
             });
-            document.getElementById('google-login-btn').addEventListener('click', () => auth.signInWithPopup(googleProvider).then(res => handleNewUser(res.user, res.user.displayName)).catch(err => showNotification(err.message, 'error')));
+           
             document.getElementById('register-btn').addEventListener('click', () => {
                 const name = document.getElementById('register-name').value, email = document.getElementById('register-email').value, password = document.getElementById('register-password').value;
                 if (!name || !email || !password) { showNotification('Please fill all fields', 'error'); return; }
