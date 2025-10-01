@@ -107,7 +107,10 @@
             transform: translateY(0);
         }
         
-     
+        .btn-google { 
+            background: #4285F4; 
+            margin-top: 1rem; 
+        } 
         
         .toggle-form a { 
             color: var(--primary-color); 
@@ -872,7 +875,7 @@
                     <input type="password" id="login-password" placeholder="Password" required>
                 </div>
                 <button class="btn" id="login-btn">Login</button>
-               
+                <button class="btn btn-google" id="google-login-btn">Login with Google</button>
                 <p class="toggle-form">Don't have an account? <a href="#" id="show-register">Register</a></p>
             </div>
             <div id="register-form" style="display: none;">
@@ -1119,8 +1122,9 @@ const firebaseConfig = {
   projectId: "chatnox-cdc0e",
   storageBucket: "chatnox-cdc0e.firebasestorage.app",
   messagingSenderId: "744129197345",
-  appId: "1:744129197345:web:6fb3b81f6cd194216e3a60",
-  measurementId: "G-Z14LLT13TF"
+  appId: "1:744129197345:web:6fb3b81f6cd194216e3a60"
+
+
 };
         firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
@@ -1888,11 +1892,39 @@ const firebaseConfig = {
             });
         }
     </script>
+    <!-- Top navigation bar -->
+<header id="topbar">
+  <!-- Hamburger icon (three horizontal lines) -->
+  <button id="menu-toggle" aria-label="Open About">
+    &#9776;
+  </button>
+</header>
+
+<!-- About Section (hidden by default, shown when toggled) -->
+<section id="about" class="about-section" hidden>
+  <h2>About Novacomm</h2>
+  <p>
+    Novacomm is a modern chatting platform that lets you connect with your friends 
+    through instant messaging, audio calls, and video calls — all in one place.  
+  </p>
+  <p>
+    Our mission is to make communication simple, secure, and enjoyable. Whether 
+    you're sharing quick messages or having face-to-face video chats, Novacomm 
+    brings you closer to the people who matter.
+  </p>
+
+  <ul>
+    <li>🔒 Encrypted messaging for privacy</li>
+    <li>📞 High-quality audio & video calls</li>
+    <li>💬 Simple and clean interface</li>
+    <li>🌍 Stay connected anytime, anywhere</li>
+  </ul>
+
+  <footer class="about-footer">
+    <p><strong>Created by:</strong> Priyanshu Pandey</p>
+  </footer>
+</section>
+
 </body>
 </html>
-
-
-
-
-
 
